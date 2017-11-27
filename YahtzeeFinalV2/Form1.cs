@@ -468,10 +468,10 @@ namespace YahtzeeFinalV2
                 diceResults[i] = 0;
             for (int i = 0; i < dice.Length; i++)
                 dice[i] = 0;
-            for (int i = 0; i < comboBool.Length; i++)
-                comboBool[i] = false;
-            for (int i = 0; i < comboScore.Length; i++)
-                comboScore[i] = 0;
+            //for (int i = 0; i < comboBool.Length; i++)
+                //comboBool[i] = false;
+           // for (int i = 0; i < comboScore.Length; i++)
+             //   comboScore[i] = 0;
 
             pictureBox6.Image = null;
             pictureBox7.Image = null;
@@ -479,6 +479,8 @@ namespace YahtzeeFinalV2
             pictureBox9.Image = null;
             pictureBox10.Image = null;
             rollCounter = 0;
+            onePair = false; twoPair = false; threeKind = false; fourKind = false; yahtzee = false; lowStraight = false; highStraight = false; chance = false; fullHouse = false;
+            onePairScore = 0; twoPairScore = 0; threeKindScore = 0; fourKindScore = 0; yahtzeeScore = 0; fullHouseScore = 0; lowStraightScore = 0; highStraightScore = 0;
             if(player1 == true)
             {
                 player1 = false;
