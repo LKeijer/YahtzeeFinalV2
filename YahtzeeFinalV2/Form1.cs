@@ -22,23 +22,36 @@ namespace YahtzeeFinalV2
         int rollCounter;
         bool onePair, twoPair, threeKind, fullHouse, lowStraight, highStraight, fourKind, yahtzee, ones, twos, threes, fours, fives, sixes, chance;
         int onePairScore, twoPairScore, threeKindScore, fullHouseScore, lowStraightScore, highStraightScore, fourKindScore, yahtzeeScore, chanceScore;
+        bool[] comboBool;
+        int[] comboScore;
+
+
+
+
+
 
         #endregion
 
         #region Initialization
         public Form1()
         {
+            player1 = true;
             InitializeComponent();
             rngeesus = new Random();
             diceImages = new Image[8];
             dice = new int[5] { 0, 0, 0, 0, 0 };
             diceResults = new int[6] { 0, 0, 0, 0, 0, 0 };
             LoadImages();
-            player1 = true;
-            player2 = false;
             rollCounter = 0;
+            comboBool = new bool[] { onePair, twoPair, threeKind, fullHouse, lowStraight, highStraight, fourKind, yahtzee, chance };
+            comboScore = new int[] { onePairScore, twoPairScore, threeKindScore, fullHouseScore, lowStraightScore, highStraightScore, fourKindScore, yahtzeeScore, chanceScore };
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
+
         #endregion
 
         #region Test Methods used to checking values
@@ -248,64 +261,239 @@ namespace YahtzeeFinalV2
                 if (diceResults[i] == 2 || diceResults[i] == 3)
                 {
                     onePair = true;
+
+                    onePairScore = ((i + 1) * 2);
+
+
                     for (int j = i+1; j < diceResults.Length; j++)
                     {
                         if(diceResults[j] == 2)
                         {
                             twoPair = true;
+                            twoPairScore = onePairScore + ((j + 1) * 2);
+
                         }
                     }
                 }
                 if (diceResults[i] == 3)
                 {
                     threeKind = true;
+                    threeKindScore = ((i+1) *3);
                     for (int k = 0; k < diceResults.Length; k++)
                     {
                         if (diceResults[k] == 2)
                         {
                             fullHouse = true;
+                            fullHouseScore = (((k + 1) * 2)+ threeKindScore);
                         }
                     }
                 }
                 if (diceResults[i] == 4)
                 {
                     fourKind = true;
+                    fourKindScore = ((i + 1) * 4);
                 }
                 if (diceResults[i] == 5)
                 {
                     yahtzee = true;
+                    yahtzeeScore = ((i + 1) * 5);
                 }
-            }
-            
+
             // Possible combinations for the low straight
-            if (diceResults[0] == 1 && diceResults[1] == 1 && diceResults[2] == 1 && diceResults[3] == 1)
+            if ((diceResults[0] == 1 || diceResults[0] == 2) && (diceResults[1] == 1 || diceResults[1] == 1) && (diceResults[2] == 1 || diceResults[2] == 2) && (diceResults[3] == 1 || diceResults[3] == 2))
             {
                 lowStraight = true;
+                lowStraightScore = 10;
             }
-            if (diceResults[4] == 1 && diceResults[1] == 1 && diceResults[2] == 1 && diceResults[3] == 1)
+            if ((diceResults[4] == 1 || diceResults[4] == 2) && (diceResults[1] == 1 || diceResults[1] == 2) && (diceResults[2] == 1 || diceResults[2] == 2) && (diceResults[3] == 1 || diceResults[3] == 2))
             {
                 lowStraight = true;
+                lowStraightScore = 14;
             }
-            if (diceResults[2] == 1 && diceResults[3] == 1 && diceResults[4] == 1 && diceResults[5] == 1)
-            {
+                if ((diceResults[2] == 1 || diceResults[2] == 2) && (diceResults[3] == 1 || diceResults[3] == 2) && (diceResults[4] == 1 || diceResults[4] == 2) && (diceResults[5] == 1 || diceResults[5] == 2))
+                {
                 lowStraight = true;
+                lowStraightScore = 18;
             }
 
             // Possible combinations for the high straight
-            if (diceResults[0] == 1 && diceResults[1] == 1 && diceResults[2] == 1 && diceResults[3] == 1 && diceResults[4] == 1)
+            if ((diceResults[0] == 1 || diceResults[0] == 2) && (diceResults[1] == 1 || diceResults[1] == 2) && (diceResults[2] == 1 || diceResults[2] == 2) && (diceResults[3] == 1 || diceResults[3] == 2) && (diceResults[4] == 1 || diceResults[4] == 2))
             {
                 highStraight = true;
+                highStraightScore = 15;
             }
-            if (diceResults[5] == 1 && diceResults[1] == 1 && diceResults[2] == 1 && diceResults[3] == 1 && diceResults[4] == 1)
+            if ((diceResults[1] == 1 || diceResults[1] == 2) && (diceResults[2] == 1 || diceResults[2] == 2) && (diceResults[3] == 1 || diceResults[3] == 2) && (diceResults[4] == 1 || diceResults[4] == 2) && (diceResults[5] == 1 || diceResults[5] == 2))
             {
                 highStraight = true;
+                highStraightScore = 16;
             }
+            }
+            
+
         }
 
         #endregion
 
+        #region UpdateLabel() updates the int labels to what was scored
+        private void UpdateLabel()
+        {
+            if (player1 == true)
+            {
+                if (onePairScore != 0)
+                {
+                    if (p1_onePairScore.Text != null)
+                    {
+                        p1_onePairScore.Text = onePairScore.ToString();
+                    }
+                }
+                if (p1_twoPairScore.Text != null)
+                {
+                    if (twoPairScore != 0)
+                    {
+                        p1_twoPairScore.Text = twoPairScore.ToString();
+                    }
+                }
+                if (p1_threeKindScore.Text != null)
+                {
+                    if (threeKindScore != 0)
+                    {
+                        p1_threeKindScore.Text = threeKindScore.ToString();
+                    }
+                }
+                if (p1_fourKindScore.Text != null)
+                {
+                    if (fourKindScore != 0)
+                    {
+                        p1_fourKindScore.Text = fourKindScore.ToString();
+                    }
+                }
+                if (p1_yahtzeeScore.Text != null)
+                {
+                    if (yahtzeeScore != 0)
+                    {
+                        p1_yahtzeeScore.Text = yahtzeeScore.ToString();
+                    }
+                }
+                if (p1_lowStraightScore.Text != null)
+                {
+                    if (lowStraightScore != 0)
+                    {
+                        p1_lowStraightScore.Text = lowStraightScore.ToString();
+                    }
+                }
+                if (p1_highStraightScore.Text != null)
+                {
+                    if (highStraightScore != 0)
+                    {
+                        p1_highStraightScore.Text = highStraightScore.ToString();
+                    }
+                }
+                if (p1_fullHouseScore.Text != null)
+                {
+                    if (fullHouseScore != 0)
+                    {
+                        p1_fullHouseScore.Text = fullHouseScore.ToString();
+                    }
+                }
+            }
 
-         
+            if (player2 == true)
+            {
+                if (onePairScore != 0)
+                {
+                if (p2_onePairScore.Text != null)
+                    {
+                        p2_onePairScore.Text = onePairScore.ToString();
+                    }
+                }
+                if (p2_twoPairScore.Text != null)
+                {
+                    if (twoPairScore != 0)
+                    {
+                        p2_twoPairScore.Text = twoPairScore.ToString();
+                    }
+                }
+                if (p2_threeKindScore.Text != null)
+                {
+                    if (threeKindScore != 0)
+                    {
+                        p2_threeKindScore.Text = threeKindScore.ToString();
+                    }
+                }
+                if (p2_fourKindScore.Text != null)
+                {
+                    if (fourKindScore != 0)
+                    {
+                        p2_fourKindScore.Text = fourKindScore.ToString();
+                    }
+                }
+                if (p2_yahtzeeScore.Text != null)
+                {
+                    if (yahtzeeScore != 0)
+                    {
+                        p2_yahtzeeScore.Text = yahtzeeScore.ToString();
+                    }
+                }
+                if (p2_lowStraightScore.Text != null)
+                {
+                    if (lowStraightScore != 0)
+                    {
+                        p2_lowStraightScore.Text = lowStraightScore.ToString();
+                    }
+                }
+                if (p2_highStraightScore.Text != null)
+                {
+                    if (highStraightScore != 0)
+                    {
+                        p2_highStraightScore.Text = highStraightScore.ToString();
+                    }
+                }
+                if (label15.Text != null)
+                {
+                    if (fullHouseScore != 0)
+                    {
+                        label15.Text = fullHouseScore.ToString();
+                    }
+                }
+            }
+            
+
+        }
+        #endregion
+
+        #region Reset() Resets all the arrays, bool values and int values to null/0
+        private void Reset()
+        {
+            for (int i = 0; i < diceResults.Length; i++)
+                diceResults[i] = 0;
+            for (int i = 0; i < dice.Length; i++)
+                dice[i] = 0;
+            for (int i = 0; i < comboBool.Length; i++)
+                comboBool[i] = false;
+            for (int i = 0; i < comboScore.Length; i++)
+                comboScore[i] = 0;
+
+            pictureBox6.Image = null;
+            pictureBox7.Image = null;
+            pictureBox8.Image = null;
+            pictureBox9.Image = null;
+            pictureBox10.Image = null;
+            rollCounter = 0;
+            if(player1 == true)
+            {
+                player1 = false;
+                player2 = true;
+            }
+            else
+            {
+                player1 = true;
+                player2 = false;
+            }
+
+
+        }
+        #endregion
+
         private void rollDiceBtn_Click(object sender, EventArgs e) 
         {
             if (rollCounter <= 2)
@@ -327,9 +515,17 @@ namespace YahtzeeFinalV2
             if (pictureBox1.Image == null && pictureBox2.Image == null && pictureBox3.Image == null && pictureBox4.Image == null && pictureBox5.Image == null)
             {
                 InsertRollsIntoResults();
-                CheckdiceResults();
+               // CheckdiceResults();
                 SetBoolValuesScoreCount();
-                CheckBoolValues();
+                 CheckBoolValues();
+                /* MessageBox.Show(onePairScore.ToString());
+                 MessageBox.Show(twoPairScore.ToString());
+                 MessageBox.Show(threeKindScore.ToString());
+                 MessageBox.Show(lowStraightScore.ToString());
+                 MessageBox.Show(highStraightScore.ToString());
+                 MessageBox.Show(fullHouse.ToString());
+                 MessageBox.Show(yahtzee.ToString()); */
+                nextPlayerBtn.Show();
 
             }
             else
@@ -338,6 +534,15 @@ namespace YahtzeeFinalV2
             }
         }
 
+        private void nextPlayerBtn_Click(object sender, EventArgs e)
+        {
+            UpdateLabel();
+            nextPlayerBtn.Hide();
+            doneBtn.Hide();
+            rollDiceBtn.Show();
+            Reset();
+            
+        }
         #region All the pictureBox click events still have to come up with a way to turn this into a function
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -457,5 +662,12 @@ namespace YahtzeeFinalV2
             }
         }
         #endregion
+
+
+        private void label17_Click(object sender, EventArgs e)
+    {
+
     }
+    }
+
 }
