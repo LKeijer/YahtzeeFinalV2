@@ -38,11 +38,6 @@ namespace YahtzeeFinalV2
             player2 = false;
             rollCounter = 0;
 
-            pictureBox1.Image = diceImages[4];
-            pictureBox2.Image = diceImages[4];
-            pictureBox3.Image = diceImages[4];
-            pictureBox4.Image = diceImages[5];
-            pictureBox5.Image = diceImages[5];
         }
         #endregion
 
@@ -73,18 +68,6 @@ namespace YahtzeeFinalV2
                 MessageBox.Show("high straight yes");
             if (fullHouse == true)
                 MessageBox.Show("full house yes");
-        }
-
-        private void CheckScores()
-        {
-            if(onePairScore != 0)
-            {
-                MessageBox.Show(onePairScore.ToString());
-            }
-            if(twoPairScore != 0)
-            {
-                MessageBox.Show(twoPairScore.ToString());
-            }
         }
 
 
