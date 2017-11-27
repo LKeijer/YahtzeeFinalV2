@@ -306,7 +306,7 @@ namespace YahtzeeFinalV2
 
 
 
-        private void rollDiceBtn_Click(object sender, EventArgs e)
+        private void rollDiceBtn_Click(object sender, EventArgs e) 
         {
             if (rollCounter <= 2)
             {
