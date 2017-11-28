@@ -283,7 +283,7 @@ namespace YahtzeeFinalV2
                         }
                     }
                 }
-                if (diceResults[i] == 4)
+                if (diceResults[i] == 4 || diceResults[i] == 5)
                 {
                     fourKind = true;
                     fourKindScore = ((i + 1) * 4);
@@ -334,142 +334,139 @@ namespace YahtzeeFinalV2
         {
             if (player1 == true)
             {
-                if (onePairScore != 0)
+                if (onePair == true)
                 {
-                        if (p1_onePairScore.Text != null)
-                        {
-                            p1_onePairScore.Text = onePairScore.ToString();
-                            p1_onePairBtn.Show();
-                        }
+                    if (p1_onePairScore.Text == "")
+                    {
+                        p1_onePairScore.Text = onePairScore.ToString();
+                        p1_onePairBtn.Show();
+                    }
                 }
-                if (p1_twoPairScore.Text != null)
+                if (twoPair == true)
                 {
-                        if (twoPairScore != 0)
-                        {
-                            p1_twoPairScore.Text = twoPairScore.ToString();
-                            p1_twoPairBtn.Show();
-                        }
-                    
+                    if (p1_twoPairScore.Text == "")
+                    {
+                        p1_twoPairScore.Text = twoPairScore.ToString();
+                        p1_twoPairBtn.Show();
+                    }
                 }
-                if (p1_threeKindScore.Text != null)
+                if (threeKind == true)
                 {
-                    if (threeKindScore != 0)
+                    if (p1_threeKindScore.Text == "")
                     {
                         p1_threeKindScore.Text = threeKindScore.ToString();
                         p1_threeKindBtn.Show();
                     }
                 }
-                if (p1_fourKindScore.Text != null)
+                if (fourKind == true)
                 {
-                    if (fourKindScore != 0)
+                    if (p1_fourKindScore.Text == "")
                     {
                         p1_fourKindScore.Text = fourKindScore.ToString();
                         p1_fourKindBtn.Show();
                     }
                 }
-                if (p1_yahtzeeScore.Text != null)
+                if (yahtzee == true)
                 {
-                    if (yahtzeeScore != 0)
+                    if (p1_yahtzeeScore.Text == "")
                     {
                         p1_yahtzeeScore.Text = yahtzeeScore.ToString();
                         p1_yahtzeeBtn.Show();
                     }
                 }
-                if (p1_lowStraightScore.Text != null)
+                if (lowStraight == true)
                 {
-                    if (lowStraightScore != 0)
+                    if (p1_lowStraightScore.Text == "")
                     {
                         p1_lowStraightScore.Text = lowStraightScore.ToString();
                         p1_lowStraightBtn.Show();
                     }
                 }
-                if (p1_highStraightScore.Text != null)
+                if (highStraight == true)
                 {
-                    if (highStraightScore != 0)
+                    if (p1_highStraightScore.Text == "")
                     {
                         p1_highStraightScore.Text = highStraightScore.ToString();
                         p1_highStraightBtn.Show();
                     }
                 }
-                if (p1_fullHouseScore.Text != null)
+                if (fullHouse == true)
                 {
-                    if (fullHouseScore != 0)
+                    if (p1_fullHouseScore.Text == "")
                     {
                         p1_fullHouseScore.Text = fullHouseScore.ToString();
                         p1_fullHouseBtn.Show();
                     }
                 }
             }
-
+            
             if (player2 == true)
             {
-                if (p2_onePairScore.Text != null)
+                if (onePair == true)
                 {
-                if (onePairScore != 0)
+                    if (p2_onePairScore.Text == "")
                     {
                         p2_onePairScore.Text = onePairScore.ToString();
                         p2_onePairBtn.Show();
                     }
                 }
-                if (p2_twoPairScore.Text != null)
+                if (twoPair == true)
                 {
-                    if (twoPairScore != 0)
+                    if (p2_twoPairScore.Text == "")
                     {
                         p2_twoPairScore.Text = twoPairScore.ToString();
                         p2_twoPairBtn.Show();
                     }
                 }
-                if (p2_threeKindScore.Text != null)
+                if (threeKind == true)
                 {
-                    if (threeKindScore != 0)
+                    if (p2_threeKindScore.Text == "")
                     {
                         p2_threeKindScore.Text = threeKindScore.ToString();
                         p2_threeKindBtn.Show();
                     }
                 }
-                if (p2_fourKindScore.Text != null)
+                if (fourKind == true)
                 {
-                    if (fourKindScore != 0)
+                    if (p2_fourKindScore.Text == "")
                     {
                         p2_fourKindScore.Text = fourKindScore.ToString();
                         p2_fourKindBtn.Show();
                     }
                 }
-                if (p2_yahtzeeScore.Text != null)
+                if (yahtzee == true)
                 {
-                    if (yahtzeeScore != 0)
+                    if (p2_yahtzeeScore.Text == "")
                     {
                         p2_yahtzeeScore.Text = yahtzeeScore.ToString();
                         p2_yahtzeeBtn.Show();
                     }
                 }
-                if (p2_lowStraightScore.Text != null)
+                if (lowStraight == true)
                 {
-                    if (lowStraightScore != 0)
+                    if (p2_lowStraightScore.Text == "")
                     {
                         p2_lowStraightScore.Text = lowStraightScore.ToString();
                         p2_lowStraightBtn.Show();
                     }
                 }
-                if (p2_highStraightScore.Text != null)
+                if (highStraight == true)
                 {
-                    if (highStraightScore != 0)
+                    if (p2_highStraightScore.Text == "")
                     {
                         p2_highStraightScore.Text = highStraightScore.ToString();
                         p2_highStraightBtn.Show();
                     }
                 }
-                if (p2_fullHouseScore.Text != null)
+                if (fullHouse == true)
                 {
-                    if (fullHouseScore != 0)
+                    if (p2_fullHouseScore.Text == "")
                     {
                         p2_fullHouseScore.Text = fullHouseScore.ToString();
                         p2_fullHouseBtn.Show();
                     }
                 }
-            } 
-            
-
+            }
         }
         #endregion
 
