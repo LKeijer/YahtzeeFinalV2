@@ -237,7 +237,7 @@ namespace YahtzeeFinalV2
             }
         }
         #endregion
-
+         
         #region SetBoolValuesScoreCount() sets possible combination to true and counts the points scored
         private void SetBoolValuesScoreCount()
         {
