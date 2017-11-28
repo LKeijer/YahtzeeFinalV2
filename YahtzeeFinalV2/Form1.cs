@@ -47,11 +47,6 @@ namespace YahtzeeFinalV2
             comboScore = new int[] { onePairScore, twoPairScore, threeKindScore, fullHouseScore, lowStraightScore, highStraightScore, fourKindScore, yahtzeeScore, chanceScore };
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         #endregion
 
         #region Test Methods used to checking values
@@ -334,7 +329,7 @@ namespace YahtzeeFinalV2
 
         #endregion
 
-        #region UpdateLabel() updates the int labels to what was scored
+        #region UpdateLabel() updates the int labels to what was scored && sets corresponding buttons to visable
         private void UpdateLabel()
         {
             if (player1 == true)
@@ -344,6 +339,7 @@ namespace YahtzeeFinalV2
                     if (p1_onePairScore.Text != null)
                     {
                         p1_onePairScore.Text = onePairScore.ToString();
+                        p1_onePairBtn.Show();
                     }
                 }
                 if (p1_twoPairScore.Text != null)
@@ -351,6 +347,7 @@ namespace YahtzeeFinalV2
                     if (twoPairScore != 0)
                     {
                         p1_twoPairScore.Text = twoPairScore.ToString();
+                        p1_twoPairBtn.Show();
                     }
                 }
                 if (p1_threeKindScore.Text != null)
@@ -358,6 +355,7 @@ namespace YahtzeeFinalV2
                     if (threeKindScore != 0)
                     {
                         p1_threeKindScore.Text = threeKindScore.ToString();
+                        p1_threeKindBtn.Show();
                     }
                 }
                 if (p1_fourKindScore.Text != null)
@@ -365,6 +363,7 @@ namespace YahtzeeFinalV2
                     if (fourKindScore != 0)
                     {
                         p1_fourKindScore.Text = fourKindScore.ToString();
+                        p1_fourKindBtn.Show();
                     }
                 }
                 if (p1_yahtzeeScore.Text != null)
@@ -372,6 +371,7 @@ namespace YahtzeeFinalV2
                     if (yahtzeeScore != 0)
                     {
                         p1_yahtzeeScore.Text = yahtzeeScore.ToString();
+                        p1_yahtzeeBtn.Show();
                     }
                 }
                 if (p1_lowStraightScore.Text != null)
@@ -379,6 +379,7 @@ namespace YahtzeeFinalV2
                     if (lowStraightScore != 0)
                     {
                         p1_lowStraightScore.Text = lowStraightScore.ToString();
+                        p1_lowStraightBtn.Show();
                     }
                 }
                 if (p1_highStraightScore.Text != null)
@@ -386,6 +387,7 @@ namespace YahtzeeFinalV2
                     if (highStraightScore != 0)
                     {
                         p1_highStraightScore.Text = highStraightScore.ToString();
+                        p1_highStraightBtn.Show();
                     }
                 }
                 if (p1_fullHouseScore.Text != null)
@@ -393,17 +395,19 @@ namespace YahtzeeFinalV2
                     if (fullHouseScore != 0)
                     {
                         p1_fullHouseScore.Text = fullHouseScore.ToString();
+                        p1_fullHouseBtn.Show();
                     }
                 }
             }
 
             if (player2 == true)
             {
-                if (onePairScore != 0)
-                {
                 if (p2_onePairScore.Text != null)
+                {
+                if (onePairScore != 0)
                     {
                         p2_onePairScore.Text = onePairScore.ToString();
+                        p2_onePairBtn.Show();
                     }
                 }
                 if (p2_twoPairScore.Text != null)
@@ -411,6 +415,7 @@ namespace YahtzeeFinalV2
                     if (twoPairScore != 0)
                     {
                         p2_twoPairScore.Text = twoPairScore.ToString();
+                        p2_twoPairBtn.Show();
                     }
                 }
                 if (p2_threeKindScore.Text != null)
@@ -418,6 +423,7 @@ namespace YahtzeeFinalV2
                     if (threeKindScore != 0)
                     {
                         p2_threeKindScore.Text = threeKindScore.ToString();
+                        p2_threeKindBtn.Show();
                     }
                 }
                 if (p2_fourKindScore.Text != null)
@@ -425,6 +431,7 @@ namespace YahtzeeFinalV2
                     if (fourKindScore != 0)
                     {
                         p2_fourKindScore.Text = fourKindScore.ToString();
+                        p2_fourKindBtn.Show();
                     }
                 }
                 if (p2_yahtzeeScore.Text != null)
@@ -432,6 +439,7 @@ namespace YahtzeeFinalV2
                     if (yahtzeeScore != 0)
                     {
                         p2_yahtzeeScore.Text = yahtzeeScore.ToString();
+                        p2_yahtzeeBtn.Show();
                     }
                 }
                 if (p2_lowStraightScore.Text != null)
@@ -439,6 +447,7 @@ namespace YahtzeeFinalV2
                     if (lowStraightScore != 0)
                     {
                         p2_lowStraightScore.Text = lowStraightScore.ToString();
+                        p2_lowStraightBtn.Show();
                     }
                 }
                 if (p2_highStraightScore.Text != null)
@@ -446,13 +455,15 @@ namespace YahtzeeFinalV2
                     if (highStraightScore != 0)
                     {
                         p2_highStraightScore.Text = highStraightScore.ToString();
+                        p2_highStraightBtn.Show();
                     }
                 }
-                if (label15.Text != null)
+                if (p2_fullHouseScore.Text != null)
                 {
                     if (fullHouseScore != 0)
                     {
-                        label15.Text = fullHouseScore.ToString();
+                        p2_fullHouseScore.Text = fullHouseScore.ToString();
+                        p2_fullHouseBtn.Show();
                     }
                 }
             }
@@ -468,10 +479,11 @@ namespace YahtzeeFinalV2
                 diceResults[i] = 0;
             for (int i = 0; i < dice.Length; i++)
                 dice[i] = 0;
+
             //for (int i = 0; i < comboBool.Length; i++)
-                //comboBool[i] = false;
-           // for (int i = 0; i < comboScore.Length; i++)
-             //   comboScore[i] = 0;
+              //  comboBool[i] = false;
+            //for (int i = 0; i < comboScore.Length; i++)
+            //    comboScore[i] = 0;
 
             pictureBox6.Image = null;
             pictureBox7.Image = null;
@@ -481,6 +493,7 @@ namespace YahtzeeFinalV2
             rollCounter = 0;
             onePair = false; twoPair = false; threeKind = false; fourKind = false; yahtzee = false; lowStraight = false; highStraight = false; chance = false; fullHouse = false;
             onePairScore = 0; twoPairScore = 0; threeKindScore = 0; fourKindScore = 0; yahtzeeScore = 0; fullHouseScore = 0; lowStraightScore = 0; highStraightScore = 0;
+
             if(player1 == true)
             {
                 player1 = false;
@@ -512,6 +525,7 @@ namespace YahtzeeFinalV2
 
         }
 
+
         private void doneBtn_Click(object sender, EventArgs e)
         {
             if (pictureBox1.Image == null && pictureBox2.Image == null && pictureBox3.Image == null && pictureBox4.Image == null && pictureBox5.Image == null)
@@ -519,16 +533,8 @@ namespace YahtzeeFinalV2
                 InsertRollsIntoResults();
                // CheckdiceResults();
                 SetBoolValuesScoreCount();
-                 CheckBoolValues();
-                /* MessageBox.Show(onePairScore.ToString());
-                 MessageBox.Show(twoPairScore.ToString());
-                 MessageBox.Show(threeKindScore.ToString());
-                 MessageBox.Show(lowStraightScore.ToString());
-                 MessageBox.Show(highStraightScore.ToString());
-                 MessageBox.Show(fullHouse.ToString());
-                 MessageBox.Show(yahtzee.ToString()); */
-                nextPlayerBtn.Show();
-
+               // CheckBoolValues();
+                UpdateLabel();
             }
             else
             {
@@ -538,7 +544,6 @@ namespace YahtzeeFinalV2
 
         private void nextPlayerBtn_Click(object sender, EventArgs e)
         {
-            UpdateLabel();
             nextPlayerBtn.Hide();
             doneBtn.Hide();
             rollDiceBtn.Show();
@@ -670,6 +675,498 @@ namespace YahtzeeFinalV2
     {
 
     }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        #region p1_Btn contains all the combination click events for player 1
+
+        private void p1_onePairBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p1_twoPairScore.Text = null;
+            if(threeKind == true)
+                p1_threeKindScore.Text = null;
+            if(fullHouse == true)
+                p1_fullHouseScore.Text = null;
+            if(lowStraight == true)
+                p1_lowStraightScore.Text = null;
+            if(highStraight == true)
+                p1_highStraightScore.Text = null;
+            if(fourKind == true)
+                p1_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p1_yahtzeeScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p1_twoPairBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (onePair == true)
+                p1_onePairScore.Text = null;
+            if (threeKind == true)
+                p1_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p1_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p1_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p1_highStraightScore.Text = null;
+            if (fourKind == true)
+                p1_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p1_yahtzeeScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p1_threeKindbtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p1_twoPairScore.Text = null;
+            if (onePair == true)
+                p1_onePairScore.Text = null;
+            if (fullHouse == true)
+                p1_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p1_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p1_highStraightScore.Text = null;
+            if (fourKind == true)
+                p1_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p1_yahtzeeScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p1_lowStraightBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p1_twoPairScore.Text = null;
+            if (threeKind == true)
+                p1_threeKindScore.Text = null;
+            if (fullHouseScore != 0)
+                p1_fullHouseScore.Text = null;
+            if (onePair == true)
+                p1_onePairScore.Text = null;
+            if (highStraight == true)
+                p1_highStraightScore.Text = null;
+            if (fourKind == true)
+                p1_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p1_yahtzeeScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p1_highStraightBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p1_twoPairScore.Text = null;
+            if (threeKind == true)
+                p1_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p1_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p1_lowStraightScore.Text = null;
+            if (onePair == true)
+                p1_onePairScore.Text = null;
+            if (fourKind == true)
+                p1_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p1_yahtzeeScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p1_fourKindBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p1_twoPairScore.Text = null;
+            if (threeKind == true)
+                p1_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p1_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p1_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p1_highStraightScore.Text = null;
+            if (onePair == true)
+                p1_onePairScore.Text = null;
+            if (yahtzee == true)
+                p1_yahtzeeScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p1_yahtzeeBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p1_twoPairScore.Text = null;
+            if (threeKind == true)
+                p1_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p1_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p1_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p1_highStraightScore.Text = null;
+            if (fourKind == true)
+                p1_fourKindScore.Text = null;
+            if (onePair == true)
+                p1_onePairScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p1_fullHouseBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p1_twoPairScore.Text = null;
+            if (threeKind == true)
+                p1_threeKindScore.Text = null;
+            if (onePair == true)
+                p1_onePairScore.Text = null;
+            if (lowStraight == true)
+                p1_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p1_highStraightScore.Text = null;
+            if (fourKind == true)
+                p1_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p1_yahtzeeScore.Text = null;
+
+            p1_onePairBtn.Hide();
+            p1_twoPairBtn.Hide();
+            p1_threeKindBtn.Hide();
+            p1_fullHouseBtn.Hide();
+            p1_lowStraightBtn.Hide();
+            p1_highStraightBtn.Hide();
+            p1_fourKindBtn.Hide();
+            p1_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+
+        }
+        #endregion
+
+        #region p2_Btn contains all the combination click events for player 2
+
+        private void p2_fullHouseBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p2_twoPairScore.Text = null;
+            if (threeKind == true)
+                p2_threeKindScore.Text = null;
+            if (onePair == true)
+                p2_onePairScore.Text = null;
+            if (lowStraight == true)
+                p2_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p2_highStraightScore.Text = null;
+            if (fourKind == true)
+                p2_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p2_yahtzeeScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p2_yahtzeeBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p2_twoPairScore.Text = null;
+            if (threeKind == true)
+                p2_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p2_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p2_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p2_highStraightScore.Text = null;
+            if (fourKind == true)
+                p2_fourKindScore.Text = null;
+            if (onePair == true)
+                p2_onePairScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p2_fourKindBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p2_twoPairScore.Text = null;
+            if (threeKind == true)
+                p2_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p2_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p2_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p2_highStraightScore.Text = null;
+            if (onePair == true)
+                p2_onePairScore.Text = null;
+            if (yahtzee == true)
+                p2_yahtzeeScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p2_highStraightBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p2_twoPairScore.Text = null;
+            if (threeKind == true)
+                p2_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p2_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p2_lowStraightScore.Text = null;
+            if (onePair == true)
+                p2_onePairScore.Text = null;
+            if (fourKind == true)
+                p2_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p2_yahtzeeScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p2_lowStraightBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p2_twoPairScore.Text = null;
+            if (threeKind == true)
+                p2_threeKindScore.Text = null;
+            if (fullHouseScore != 0)
+                p2_fullHouseScore.Text = null;
+            if (onePair == true)
+                p2_onePairScore.Text = null;
+            if (highStraight == true)
+                p2_highStraightScore.Text = null;
+            if (fourKind == true)
+                p2_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p2_yahtzeeScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p2_threeKindBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p2_twoPairScore.Text = null;
+            if (onePair == true)
+                p2_onePairScore.Text = null;
+            if (fullHouse == true)
+                p2_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p2_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p2_highStraightScore.Text = null;
+            if (fourKind == true)
+                p2_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p2_yahtzeeScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p2_twoPairBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (onePair == true)
+                p2_onePairScore.Text = null;
+            if (threeKind == true)
+                p2_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p2_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p2_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p2_highStraightScore.Text = null;
+            if (fourKind == true)
+                p2_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p2_yahtzeeScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+
+        private void p2_onePairBtn_Click(object sender, EventArgs e)
+        {
+            nextPlayerBtn.Show();
+
+            if (twoPair == true)
+                p2_twoPairScore.Text = null;
+            if (threeKind == true)
+                p2_threeKindScore.Text = null;
+            if (fullHouse == true)
+                p2_fullHouseScore.Text = null;
+            if (lowStraight == true)
+                p2_lowStraightScore.Text = null;
+            if (highStraight == true)
+                p2_highStraightScore.Text = null;
+            if (fourKind == true)
+                p2_fourKindScore.Text = null;
+            if (yahtzee == true)
+                p2_yahtzeeScore.Text = null;
+
+            p2_onePairBtn.Hide();
+            p2_twoPairBtn.Hide();
+            p2_threeKindBtn.Hide();
+            p2_fullHouseBtn.Hide();
+            p2_lowStraightBtn.Hide();
+            p2_highStraightBtn.Hide();
+            p2_fourKindBtn.Hide();
+            p2_yahtzeeBtn.Hide();
+            doneBtn.Hide();
+        }
+        #endregion
     }
 
 }

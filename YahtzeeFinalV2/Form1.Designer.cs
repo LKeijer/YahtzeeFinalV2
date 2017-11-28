@@ -71,8 +71,24 @@
             this.p2_onePairScore = new System.Windows.Forms.Label();
             this.pp = new System.Windows.Forms.Label();
             this.p1_fullHouseScore = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.p2_fullHouseScore = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.p1_onePairBtn = new System.Windows.Forms.Button();
+            this.p1_twoPairBtn = new System.Windows.Forms.Button();
+            this.p1_threeKindBtn = new System.Windows.Forms.Button();
+            this.p1_lowStraightBtn = new System.Windows.Forms.Button();
+            this.p1_highStraightBtn = new System.Windows.Forms.Button();
+            this.p1_fourKindBtn = new System.Windows.Forms.Button();
+            this.p1_yahtzeeBtn = new System.Windows.Forms.Button();
+            this.p1_fullHouseBtn = new System.Windows.Forms.Button();
+            this.p2_fullHouseBtn = new System.Windows.Forms.Button();
+            this.p2_yahtzeeBtn = new System.Windows.Forms.Button();
+            this.p2_fourKindBtn = new System.Windows.Forms.Button();
+            this.p2_highStraightBtn = new System.Windows.Forms.Button();
+            this.p2_lowStraightBtn = new System.Windows.Forms.Button();
+            this.p2_threeKindBtn = new System.Windows.Forms.Button();
+            this.p2_twoPairBtn = new System.Windows.Forms.Button();
+            this.p2_onePairBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -473,13 +489,13 @@
             this.p1_fullHouseScore.Size = new System.Drawing.Size(0, 13);
             this.p1_fullHouseScore.TabIndex = 42;
             // 
-            // label15
+            // p2_fullHouseScore
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(682, 240);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(0, 13);
-            this.label15.TabIndex = 44;
+            this.p2_fullHouseScore.AutoSize = true;
+            this.p2_fullHouseScore.Location = new System.Drawing.Point(682, 240);
+            this.p2_fullHouseScore.Name = "p2_fullHouseScore";
+            this.p2_fullHouseScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_fullHouseScore.TabIndex = 44;
             // 
             // label16
             // 
@@ -490,12 +506,204 @@
             this.label16.TabIndex = 43;
             this.label16.Text = "Full house";
             // 
+            // p1_onePairBtn
+            // 
+            this.p1_onePairBtn.Location = new System.Drawing.Point(129, 74);
+            this.p1_onePairBtn.Name = "p1_onePairBtn";
+            this.p1_onePairBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_onePairBtn.TabIndex = 45;
+            this.p1_onePairBtn.Text = "^";
+            this.p1_onePairBtn.UseVisualStyleBackColor = true;
+            this.p1_onePairBtn.Visible = false;
+            this.p1_onePairBtn.Click += new System.EventHandler(this.p1_onePairBtn_Click);
+            // 
+            // p1_twoPairBtn
+            // 
+            this.p1_twoPairBtn.Location = new System.Drawing.Point(129, 96);
+            this.p1_twoPairBtn.Name = "p1_twoPairBtn";
+            this.p1_twoPairBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_twoPairBtn.TabIndex = 46;
+            this.p1_twoPairBtn.Text = "^";
+            this.p1_twoPairBtn.UseVisualStyleBackColor = true;
+            this.p1_twoPairBtn.Visible = false;
+            this.p1_twoPairBtn.Click += new System.EventHandler(this.p1_twoPairBtn_Click);
+            // 
+            // p1_threeKindBtn
+            // 
+            this.p1_threeKindBtn.Location = new System.Drawing.Point(129, 118);
+            this.p1_threeKindBtn.Name = "p1_threeKindBtn";
+            this.p1_threeKindBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_threeKindBtn.TabIndex = 47;
+            this.p1_threeKindBtn.Text = "^";
+            this.p1_threeKindBtn.UseVisualStyleBackColor = true;
+            this.p1_threeKindBtn.Visible = false;
+            this.p1_threeKindBtn.Click += new System.EventHandler(this.p1_threeKindbtn_Click);
+            // 
+            // p1_lowStraightBtn
+            // 
+            this.p1_lowStraightBtn.Location = new System.Drawing.Point(129, 140);
+            this.p1_lowStraightBtn.Name = "p1_lowStraightBtn";
+            this.p1_lowStraightBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_lowStraightBtn.TabIndex = 48;
+            this.p1_lowStraightBtn.Text = "^";
+            this.p1_lowStraightBtn.UseVisualStyleBackColor = true;
+            this.p1_lowStraightBtn.Visible = false;
+            this.p1_lowStraightBtn.Click += new System.EventHandler(this.p1_lowStraightBtn_Click);
+            // 
+            // p1_highStraightBtn
+            // 
+            this.p1_highStraightBtn.Location = new System.Drawing.Point(129, 163);
+            this.p1_highStraightBtn.Name = "p1_highStraightBtn";
+            this.p1_highStraightBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_highStraightBtn.TabIndex = 49;
+            this.p1_highStraightBtn.Text = "^";
+            this.p1_highStraightBtn.UseVisualStyleBackColor = true;
+            this.p1_highStraightBtn.Visible = false;
+            this.p1_highStraightBtn.Click += new System.EventHandler(this.p1_highStraightBtn_Click);
+            // 
+            // p1_fourKindBtn
+            // 
+            this.p1_fourKindBtn.Location = new System.Drawing.Point(129, 185);
+            this.p1_fourKindBtn.Name = "p1_fourKindBtn";
+            this.p1_fourKindBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_fourKindBtn.TabIndex = 50;
+            this.p1_fourKindBtn.Text = "^";
+            this.p1_fourKindBtn.UseVisualStyleBackColor = true;
+            this.p1_fourKindBtn.Visible = false;
+            this.p1_fourKindBtn.Click += new System.EventHandler(this.p1_fourKindBtn_Click);
+            // 
+            // p1_yahtzeeBtn
+            // 
+            this.p1_yahtzeeBtn.Location = new System.Drawing.Point(129, 207);
+            this.p1_yahtzeeBtn.Name = "p1_yahtzeeBtn";
+            this.p1_yahtzeeBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_yahtzeeBtn.TabIndex = 51;
+            this.p1_yahtzeeBtn.Text = "^";
+            this.p1_yahtzeeBtn.UseVisualStyleBackColor = true;
+            this.p1_yahtzeeBtn.Visible = false;
+            this.p1_yahtzeeBtn.Click += new System.EventHandler(this.p1_yahtzeeBtn_Click);
+            // 
+            // p1_fullHouseBtn
+            // 
+            this.p1_fullHouseBtn.Location = new System.Drawing.Point(129, 237);
+            this.p1_fullHouseBtn.Name = "p1_fullHouseBtn";
+            this.p1_fullHouseBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_fullHouseBtn.TabIndex = 52;
+            this.p1_fullHouseBtn.Text = "^";
+            this.p1_fullHouseBtn.UseVisualStyleBackColor = true;
+            this.p1_fullHouseBtn.Visible = false;
+            this.p1_fullHouseBtn.Click += new System.EventHandler(this.p1_fullHouseBtn_Click);
+            // 
+            // p2_fullHouseBtn
+            // 
+            this.p2_fullHouseBtn.Location = new System.Drawing.Point(631, 237);
+            this.p2_fullHouseBtn.Name = "p2_fullHouseBtn";
+            this.p2_fullHouseBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_fullHouseBtn.TabIndex = 60;
+            this.p2_fullHouseBtn.Text = "^";
+            this.p2_fullHouseBtn.UseVisualStyleBackColor = true;
+            this.p2_fullHouseBtn.Visible = false;
+            this.p2_fullHouseBtn.Click += new System.EventHandler(this.p2_fullHouseBtn_Click);
+            // 
+            // p2_yahtzeeBtn
+            // 
+            this.p2_yahtzeeBtn.Location = new System.Drawing.Point(631, 207);
+            this.p2_yahtzeeBtn.Name = "p2_yahtzeeBtn";
+            this.p2_yahtzeeBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_yahtzeeBtn.TabIndex = 59;
+            this.p2_yahtzeeBtn.Text = "^";
+            this.p2_yahtzeeBtn.UseVisualStyleBackColor = true;
+            this.p2_yahtzeeBtn.Visible = false;
+            this.p2_yahtzeeBtn.Click += new System.EventHandler(this.p2_yahtzeeBtn_Click);
+            // 
+            // p2_fourKindBtn
+            // 
+            this.p2_fourKindBtn.Location = new System.Drawing.Point(631, 185);
+            this.p2_fourKindBtn.Name = "p2_fourKindBtn";
+            this.p2_fourKindBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_fourKindBtn.TabIndex = 58;
+            this.p2_fourKindBtn.Text = "^";
+            this.p2_fourKindBtn.UseVisualStyleBackColor = true;
+            this.p2_fourKindBtn.Visible = false;
+            this.p2_fourKindBtn.Click += new System.EventHandler(this.p2_fourKindBtn_Click);
+            // 
+            // p2_highStraightBtn
+            // 
+            this.p2_highStraightBtn.Location = new System.Drawing.Point(631, 163);
+            this.p2_highStraightBtn.Name = "p2_highStraightBtn";
+            this.p2_highStraightBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_highStraightBtn.TabIndex = 57;
+            this.p2_highStraightBtn.Text = "^";
+            this.p2_highStraightBtn.UseVisualStyleBackColor = true;
+            this.p2_highStraightBtn.Visible = false;
+            this.p2_highStraightBtn.Click += new System.EventHandler(this.p2_highStraightBtn_Click);
+            // 
+            // p2_lowStraightBtn
+            // 
+            this.p2_lowStraightBtn.Location = new System.Drawing.Point(631, 140);
+            this.p2_lowStraightBtn.Name = "p2_lowStraightBtn";
+            this.p2_lowStraightBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_lowStraightBtn.TabIndex = 56;
+            this.p2_lowStraightBtn.Text = "^";
+            this.p2_lowStraightBtn.UseVisualStyleBackColor = true;
+            this.p2_lowStraightBtn.Visible = false;
+            this.p2_lowStraightBtn.Click += new System.EventHandler(this.p2_lowStraightBtn_Click);
+            // 
+            // p2_threeKindBtn
+            // 
+            this.p2_threeKindBtn.Location = new System.Drawing.Point(631, 118);
+            this.p2_threeKindBtn.Name = "p2_threeKindBtn";
+            this.p2_threeKindBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_threeKindBtn.TabIndex = 55;
+            this.p2_threeKindBtn.Text = "^";
+            this.p2_threeKindBtn.UseVisualStyleBackColor = true;
+            this.p2_threeKindBtn.Visible = false;
+            this.p2_threeKindBtn.Click += new System.EventHandler(this.p2_threeKindBtn_Click);
+            // 
+            // p2_twoPairBtn
+            // 
+            this.p2_twoPairBtn.Location = new System.Drawing.Point(631, 96);
+            this.p2_twoPairBtn.Name = "p2_twoPairBtn";
+            this.p2_twoPairBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_twoPairBtn.TabIndex = 54;
+            this.p2_twoPairBtn.Text = "^";
+            this.p2_twoPairBtn.UseVisualStyleBackColor = true;
+            this.p2_twoPairBtn.Visible = false;
+            this.p2_twoPairBtn.Click += new System.EventHandler(this.p2_twoPairBtn_Click);
+            // 
+            // p2_onePairBtn
+            // 
+            this.p2_onePairBtn.Location = new System.Drawing.Point(631, 74);
+            this.p2_onePairBtn.Name = "p2_onePairBtn";
+            this.p2_onePairBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_onePairBtn.TabIndex = 53;
+            this.p2_onePairBtn.Text = "^";
+            this.p2_onePairBtn.UseVisualStyleBackColor = true;
+            this.p2_onePairBtn.Visible = false;
+            this.p2_onePairBtn.Click += new System.EventHandler(this.p2_onePairBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.p2_fullHouseBtn);
+            this.Controls.Add(this.p2_yahtzeeBtn);
+            this.Controls.Add(this.p2_fourKindBtn);
+            this.Controls.Add(this.p2_highStraightBtn);
+            this.Controls.Add(this.p2_lowStraightBtn);
+            this.Controls.Add(this.p2_threeKindBtn);
+            this.Controls.Add(this.p2_twoPairBtn);
+            this.Controls.Add(this.p2_onePairBtn);
+            this.Controls.Add(this.p1_fullHouseBtn);
+            this.Controls.Add(this.p1_yahtzeeBtn);
+            this.Controls.Add(this.p1_fourKindBtn);
+            this.Controls.Add(this.p1_highStraightBtn);
+            this.Controls.Add(this.p1_lowStraightBtn);
+            this.Controls.Add(this.p1_threeKindBtn);
+            this.Controls.Add(this.p1_twoPairBtn);
+            this.Controls.Add(this.p1_onePairBtn);
+            this.Controls.Add(this.p2_fullHouseScore);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.p1_fullHouseScore);
             this.Controls.Add(this.pp);
@@ -603,8 +811,24 @@
         private System.Windows.Forms.Label p2_onePairScore;
         private System.Windows.Forms.Label pp;
         private System.Windows.Forms.Label p1_fullHouseScore;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label p2_fullHouseScore;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button p1_onePairBtn;
+        private System.Windows.Forms.Button p1_twoPairBtn;
+        private System.Windows.Forms.Button p1_threeKindBtn;
+        private System.Windows.Forms.Button p1_lowStraightBtn;
+        private System.Windows.Forms.Button p1_highStraightBtn;
+        private System.Windows.Forms.Button p1_fourKindBtn;
+        private System.Windows.Forms.Button p1_yahtzeeBtn;
+        private System.Windows.Forms.Button p1_fullHouseBtn;
+        private System.Windows.Forms.Button p2_fullHouseBtn;
+        private System.Windows.Forms.Button p2_yahtzeeBtn;
+        private System.Windows.Forms.Button p2_fourKindBtn;
+        private System.Windows.Forms.Button p2_highStraightBtn;
+        private System.Windows.Forms.Button p2_lowStraightBtn;
+        private System.Windows.Forms.Button p2_threeKindBtn;
+        private System.Windows.Forms.Button p2_twoPairBtn;
+        private System.Windows.Forms.Button p2_onePairBtn;
     }
 }
 
