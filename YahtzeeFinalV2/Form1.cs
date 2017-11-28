@@ -253,7 +253,7 @@ namespace YahtzeeFinalV2
 
             for (int i = 0; i < diceResults.Length; i++)
             {
-                if (diceResults[i] == 2 || diceResults[i] == 3)
+                if (diceResults[i] == 2 || diceResults[i] == 3 || diceResults[i] == 4 || diceResults[i] == 5)
                 {
                     onePair = true;
 
@@ -262,7 +262,7 @@ namespace YahtzeeFinalV2
 
                     for (int j = i+1; j < diceResults.Length; j++)
                     {
-                        if(diceResults[j] == 2)
+                        if(diceResults[j] == 2 || diceResults[j] == 3)
                         {
                             twoPair = true;
                             twoPairScore = onePairScore + ((j + 1) * 2);
@@ -270,7 +270,7 @@ namespace YahtzeeFinalV2
                         }
                     }
                 }
-                if (diceResults[i] == 3)
+                if (diceResults[i] == 3 || diceResults[i] == 4 || diceResults[i] == 5)
                 {
                     threeKind = true;
                     threeKindScore = ((i+1) *3);
@@ -336,19 +336,20 @@ namespace YahtzeeFinalV2
             {
                 if (onePairScore != 0)
                 {
-                    if (p1_onePairScore.Text != null)
-                    {
-                        p1_onePairScore.Text = onePairScore.ToString();
-                        p1_onePairBtn.Show();
-                    }
+                        if (p1_onePairScore.Text != null)
+                        {
+                            p1_onePairScore.Text = onePairScore.ToString();
+                            p1_onePairBtn.Show();
+                        }
                 }
                 if (p1_twoPairScore.Text != null)
                 {
-                    if (twoPairScore != 0)
-                    {
-                        p1_twoPairScore.Text = twoPairScore.ToString();
-                        p1_twoPairBtn.Show();
-                    }
+                        if (twoPairScore != 0)
+                        {
+                            p1_twoPairScore.Text = twoPairScore.ToString();
+                            p1_twoPairBtn.Show();
+                        }
+                    
                 }
                 if (p1_threeKindScore.Text != null)
                 {
@@ -533,8 +534,9 @@ namespace YahtzeeFinalV2
                 InsertRollsIntoResults();
                // CheckdiceResults();
                 SetBoolValuesScoreCount();
-               // CheckBoolValues();
+                CheckBoolValues();
                 UpdateLabel();
+                doneBtn.Hide();
             }
             else
             {
@@ -550,6 +552,7 @@ namespace YahtzeeFinalV2
             Reset();
             
         }
+
         #region All the pictureBox click events still have to come up with a way to turn this into a function
         private void pictureBox1_Click(object sender, EventArgs e)
         {
