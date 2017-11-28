@@ -466,7 +466,7 @@ namespace YahtzeeFinalV2
                         p2_fullHouseBtn.Show();
                     }
                 }
-            }
+            } 
             
 
         }
