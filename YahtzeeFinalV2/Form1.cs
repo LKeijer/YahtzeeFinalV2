@@ -579,7 +579,7 @@ namespace YahtzeeFinalV2
                 doneBtn.Hide();
             }
             else
-            {
+            { 
                 MessageBox.Show("Please select all the dice.");
             }
         }

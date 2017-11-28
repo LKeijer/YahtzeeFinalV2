@@ -91,15 +91,15 @@
             this.p2_onePairBtn = new System.Windows.Forms.Button();
             this.currentPlayerLbl = new System.Windows.Forms.Label();
             this.p1_lowerBox = new System.Windows.Forms.GroupBox();
+            this.p1_chanceScore = new System.Windows.Forms.Label();
+            this.p1_chanceBtn = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.p2_chanceBtn = new System.Windows.Forms.Button();
+            this.p2_chanceScore = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
             this.p1_upperBox = new System.Windows.Forms.GroupBox();
             this.p2_upperBox = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.p1_chanceBtn = new System.Windows.Forms.Button();
-            this.p1_chanceScore = new System.Windows.Forms.Label();
-            this.p2_chanceScore = new System.Windows.Forms.Label();
-            this.p2_chanceBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -703,7 +703,7 @@
             // currentPlayerLbl
             // 
             this.currentPlayerLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.currentPlayerLbl.Location = new System.Drawing.Point(347, 102);
+            this.currentPlayerLbl.Location = new System.Drawing.Point(347, 90);
             this.currentPlayerLbl.Name = "currentPlayerLbl";
             this.currentPlayerLbl.Size = new System.Drawing.Size(237, 76);
             this.currentPlayerLbl.TabIndex = 61;
@@ -746,6 +746,34 @@
             this.p1_lowerBox.TabStop = false;
             this.p1_lowerBox.Text = "Player 1 Lower";
             // 
+            // p1_chanceScore
+            // 
+            this.p1_chanceScore.AutoSize = true;
+            this.p1_chanceScore.Location = new System.Drawing.Point(94, 217);
+            this.p1_chanceScore.Name = "p1_chanceScore";
+            this.p1_chanceScore.Size = new System.Drawing.Size(0, 13);
+            this.p1_chanceScore.TabIndex = 66;
+            // 
+            // p1_chanceBtn
+            // 
+            this.p1_chanceBtn.Location = new System.Drawing.Point(123, 208);
+            this.p1_chanceBtn.Name = "p1_chanceBtn";
+            this.p1_chanceBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_chanceBtn.TabIndex = 66;
+            this.p1_chanceBtn.Text = "^";
+            this.p1_chanceBtn.UseVisualStyleBackColor = true;
+            this.p1_chanceBtn.Visible = false;
+            this.p1_chanceBtn.Click += new System.EventHandler(this.p1_chanceBtn_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 214);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(44, 13);
+            this.label15.TabIndex = 53;
+            this.label15.Text = "Chance";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.p2_chanceBtn);
@@ -782,6 +810,34 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player 2 Lower";
             // 
+            // p2_chanceBtn
+            // 
+            this.p2_chanceBtn.Location = new System.Drawing.Point(24, 211);
+            this.p2_chanceBtn.Name = "p2_chanceBtn";
+            this.p2_chanceBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_chanceBtn.TabIndex = 66;
+            this.p2_chanceBtn.Text = "^";
+            this.p2_chanceBtn.UseVisualStyleBackColor = true;
+            this.p2_chanceBtn.Visible = false;
+            this.p2_chanceBtn.Click += new System.EventHandler(this.p2_chanceBtn_Click);
+            // 
+            // p2_chanceScore
+            // 
+            this.p2_chanceScore.AutoSize = true;
+            this.p2_chanceScore.Location = new System.Drawing.Point(75, 217);
+            this.p2_chanceScore.Name = "p2_chanceScore";
+            this.p2_chanceScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_chanceScore.TabIndex = 67;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(102, 214);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(44, 13);
+            this.label17.TabIndex = 66;
+            this.label17.Text = "Chance";
+            // 
             // p1_upperBox
             // 
             this.p1_upperBox.Location = new System.Drawing.Point(58, 28);
@@ -799,62 +855,6 @@
             this.p2_upperBox.TabIndex = 65;
             this.p2_upperBox.TabStop = false;
             this.p2_upperBox.Text = "Player 2 Upper";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 214);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(44, 13);
-            this.label15.TabIndex = 53;
-            this.label15.Text = "Chance";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(102, 214);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(44, 13);
-            this.label17.TabIndex = 66;
-            this.label17.Text = "Chance";
-            // 
-            // p1_chanceBtn
-            // 
-            this.p1_chanceBtn.Location = new System.Drawing.Point(123, 208);
-            this.p1_chanceBtn.Name = "p1_chanceBtn";
-            this.p1_chanceBtn.Size = new System.Drawing.Size(35, 24);
-            this.p1_chanceBtn.TabIndex = 66;
-            this.p1_chanceBtn.Text = "^";
-            this.p1_chanceBtn.UseVisualStyleBackColor = true;
-            this.p1_chanceBtn.Visible = false;
-            this.p1_chanceBtn.Click += new System.EventHandler(this.p1_chanceBtn_Click);
-            // 
-            // p1_chanceScore
-            // 
-            this.p1_chanceScore.AutoSize = true;
-            this.p1_chanceScore.Location = new System.Drawing.Point(94, 217);
-            this.p1_chanceScore.Name = "p1_chanceScore";
-            this.p1_chanceScore.Size = new System.Drawing.Size(0, 13);
-            this.p1_chanceScore.TabIndex = 66;
-            // 
-            // p2_chanceScore
-            // 
-            this.p2_chanceScore.AutoSize = true;
-            this.p2_chanceScore.Location = new System.Drawing.Point(75, 217);
-            this.p2_chanceScore.Name = "p2_chanceScore";
-            this.p2_chanceScore.Size = new System.Drawing.Size(0, 13);
-            this.p2_chanceScore.TabIndex = 67;
-            // 
-            // p2_chanceBtn
-            // 
-            this.p2_chanceBtn.Location = new System.Drawing.Point(24, 211);
-            this.p2_chanceBtn.Name = "p2_chanceBtn";
-            this.p2_chanceBtn.Size = new System.Drawing.Size(35, 24);
-            this.p2_chanceBtn.TabIndex = 66;
-            this.p2_chanceBtn.Text = "^";
-            this.p2_chanceBtn.UseVisualStyleBackColor = true;
-            this.p2_chanceBtn.Visible = false;
-            this.p2_chanceBtn.Click += new System.EventHandler(this.p2_chanceBtn_Click);
             // 
             // p2_lowerBox
             // 
