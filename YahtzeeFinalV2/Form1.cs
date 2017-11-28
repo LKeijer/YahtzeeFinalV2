@@ -120,7 +120,7 @@ namespace YahtzeeFinalV2
                 pictureBox5.Image = diceImages[dice[4]];
         }
         #endregion
-
+         
         #region InsertRollsIntoResults() adds the 'saved' dice into the diceResults array.
         private void InsertRollsIntoResults()
         {
