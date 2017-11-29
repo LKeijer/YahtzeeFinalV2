@@ -299,7 +299,7 @@ namespace YahtzeeFinalV2
                 if (diceResults[i] == 5)
                 {
                     yahtzee = true;
-                    yahtzeeScore = ((i + 1) * 5);
+                    yahtzeeScore = ((i + 1) * 5); 
                 }
 
                 // Possible combinations for the low straight
