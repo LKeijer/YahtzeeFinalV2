@@ -21,7 +21,7 @@ namespace YahtzeeFinalV2
         bool player2;
         int rollCounter;
         bool onePair, twoPair, threeKind, fullHouse, lowStraight, highStraight, fourKind, yahtzee, ones, twos, threes, fours, fives, sixes, chance;
-        int onePairScore, twoPairScore, threeKindScore, fullHouseScore, lowStraightScore, highStraightScore, fourKindScore, yahtzeeScore, chanceScore;
+        int onePairScore, twoPairScore, threeKindScore, fullHouseScore, lowStraightScore, highStraightScore, fourKindScore, yahtzeeScore, chanceScore, onesScore, twosScore, threesScore, foursScore, fivesScore, sixesScore;
         bool p1onePair, p1twoPair, p1threeKind, p1fourKind, p1yahtzee, p1lowStraight, p1highStraight, p1chance, p1fullHouse, p2onePair, p2twoPair, p2threeKind, p2fourKind, p2yahtzee, p2lowStraight, p2highStraight, p2chance, p2fullHouse;
         bool[] comboBool;
         int[] comboScore;
@@ -94,6 +94,12 @@ namespace YahtzeeFinalV2
             diceImages[6] = Properties.Resources._6;
             diceImages[7] = Properties.Resources._7;
         }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
         #endregion
 
         #region RollTheDice() rolls the dice and sets the corresponding images in pictureboxes 1-5
@@ -254,6 +260,7 @@ namespace YahtzeeFinalV2
 
             for (int i = 0; i < diceResults.Length; i++)
             {
+
                 if (diceResults[i] == 2 || diceResults[i] == 3 || diceResults[i] == 4 || diceResults[i] == 5)
                 {
                     onePair = true;
@@ -325,8 +332,153 @@ namespace YahtzeeFinalV2
                 }
             }
             chance = true;
-            chanceScore = (dice[0] + 1) + (dice[1] + 1) + (dice[2] + 1) + (dice[3] + 1) + (dice[4] + 1);
+            chanceScore = dice[0] + dice[1] + dice[2] + dice[3] + dice[4];
 
+            if (diceResults[0] == 1 || diceResults[0] == 2 || diceResults[0] == 3 || diceResults[0] == 4 || diceResults[0] == 5)
+            {
+                ones = true;
+                if (diceResults[0] == 1)
+                {
+                    onesScore = 1;
+                }
+                else if (diceResults[0] == 2)
+                {
+                    onesScore = 2;
+                }
+                else if (diceResults[0] == 3)
+                {
+                    onesScore = 3;
+                }
+                else if (diceResults[0] == 4)
+                {
+                    onesScore = 4;
+                }
+                else if (diceResults[0] == 5)
+                {
+                    onesScore = 5;
+                }
+            }
+            if (diceResults[1] == 1 || diceResults[1] == 2 || diceResults[1] == 3 || diceResults[1] == 4 || diceResults[1] == 5)
+            {
+                twos = true;
+                if (diceResults[1] == 1)
+                {
+                    twosScore = 2;
+                }
+                if (diceResults[1] == 2)
+                {
+                    twosScore = 4;
+                }
+                if (diceResults[1] == 3)
+                {
+                    twosScore = 6;
+                }
+                if (diceResults[1] == 4)
+                {
+                    twosScore = 8;
+                }
+                if (diceResults[1] == 5)
+                {
+                    twosScore = 10;
+                }
+            }
+
+                if (diceResults[2] == 1 || diceResults[2] == 2 || diceResults[2] == 3 || diceResults[2] == 4 || diceResults[2] == 5)
+                {
+                    threes = true;
+                    if (diceResults[2] == 1)
+                    {
+                        threesScore = 3;
+                    }
+                    if (diceResults[2] == 2)
+                    {
+                        threesScore = 6;
+                    }
+                    if (diceResults[2] == 3)
+                    {
+                        threesScore = 9;
+                    }
+                    if (diceResults[2] == 4)
+                    {
+                        threesScore = 12;
+                    }
+                    if (diceResults[2] == 5)
+                    {
+                        threesScore = 15;
+                    }
+                }
+            if (diceResults[3] == 1 || diceResults[3] == 2 || diceResults[3] == 3 || diceResults[3] == 4 || diceResults[3] == 5)
+            {
+                twos = true;
+                if (diceResults[3] == 1)
+                {
+                    twosScore = 4;
+                }
+                if (diceResults[3] == 2)
+                {
+                    twosScore = 8;
+                }
+                if (diceResults[3] == 3)
+                {
+                    twosScore = 12;
+                }
+                if (diceResults[3] == 4)
+                {
+                    twosScore = 16;
+                }
+                if (diceResults[3] == 5)
+                {
+                    twosScore = 20;
+                }
+            }
+            if (diceResults[4] == 4 || diceResults[4] == 2 || diceResults[4] == 3 || diceResults[4] == 4 || diceResults[4] == 5)
+            {
+                twos = true;
+                if (diceResults[4] == 1)
+                {
+                    twosScore = 5;
+                }
+                if (diceResults[4] == 2)
+                {
+                    twosScore = 10;
+                }
+                if (diceResults[4] == 3)
+                {
+                    twosScore = 15;
+                }
+                if (diceResults[4] == 4)
+                {
+                    twosScore = 20;
+                }
+                if (diceResults[4] == 5)
+                {
+                    twosScore = 25;
+                }
+            }
+            if (diceResults[5] == 1 || diceResults[5] == 2 || diceResults[5] == 3 || diceResults[5] == 4 || diceResults[5] == 5)
+            {
+                twos = true;
+                if (diceResults[5] == 1)
+                {
+                    twosScore = 6;
+                }
+                if (diceResults[5] == 2)
+                {
+                    twosScore = 12;
+                }
+                if (diceResults[5] == 3)
+                {
+                    twosScore = 18;
+                }
+                if (diceResults[5] == 4)
+                {
+                    twosScore = 24;
+                }
+                if (diceResults[5] == 5)
+                {
+                    twosScore = 30;
+                }
+            }
 
         }
 
@@ -337,6 +489,55 @@ namespace YahtzeeFinalV2
         {
             if (player1 == true)
             {
+
+                if (ones == true)
+                {
+                    if(p1_onesScore.Text == "")
+                    {
+                        p1_onesScore.Text = onesScore.ToString();
+                        p1_onesBtn.Show();
+                    }
+                }
+                if (twos == true)
+                {
+                    if(p1_twoPairScore.Text == "")
+                    {
+                        p1_twosScore.Text = twosScore.ToString();
+                        p1_twosBtn.Show(); 
+                    }
+                }
+                if (threes == true)
+                {
+                    if (p1_threesScore.Text == "")
+                    {
+                        p1_threesScore.Text = threesScore.ToString();
+                        p1_threesBtn.Show();
+                    }
+                }
+                if (fours == true)
+                {
+                    if (p1_foursScore.Text == "")
+                    {
+                        p1_foursScore.Text = foursScore.ToString();
+                        p1_foursBtn.Show();
+                    }
+                }
+                if (fives == true)
+                {
+                    if (p1_fivesScore.Text == "")
+                    {
+                        p1_fivesScore.Text = fivesScore.ToString();
+                        p1_fivesBtn.Show();
+                    }
+                }
+                if (sixes == true)
+                {
+                    if (p1_sixesScore.Text == "")
+                    {
+                        p1_fivesScore.Text = fivesScore.ToString();
+                        p1_fivesBtn.Show();
+                    }
+                }
                 if (onePair == true)
                 {
                     if (p1_onePairScore.Text == "")
@@ -413,6 +614,54 @@ namespace YahtzeeFinalV2
 
             if (player2 == true)
             {
+                if (ones == true)
+                {
+                    if (p1_onesScore.Text == "")
+                    {
+                        p1_onesScore.Text = onesScore.ToString();
+                        p1_onesBtn.Show();
+                    }
+                }
+                if (twos == true)
+                {
+                    if (p1_twoPairScore.Text == "")
+                    {
+                        p1_twosScore.Text = twosScore.ToString();
+                        p1_twosBtn.Show();
+                    }
+                }
+                if (threes == true)
+                {
+                    if (p1_threesScore.Text == "")
+                    {
+                        p1_threesScore.Text = threesScore.ToString();
+                        p1_threesBtn.Show();
+                    }
+                }
+                if (fours == true)
+                {
+                    if (p1_foursScore.Text == "")
+                    {
+                        p1_foursScore.Text = foursScore.ToString();
+                        p1_foursBtn.Show();
+                    }
+                }
+                if (fives == true)
+                {
+                    if (p1_fivesScore.Text == "")
+                    {
+                        p1_fivesScore.Text = fivesScore.ToString();
+                        p1_fivesBtn.Show();
+                    }
+                }
+                if (sixes == true)
+                {
+                    if (p1_sixesScore.Text == "")
+                    {
+                        p1_fivesScore.Text = fivesScore.ToString();
+                        p1_fivesBtn.Show();
+                    }
+                }
                 if (onePair == true)
                 {
                     if (p2_onePairScore.Text == "")
@@ -549,6 +798,7 @@ namespace YahtzeeFinalV2
 
         }
         #endregion
+
 
         private void rollDiceBtn_Click(object sender, EventArgs e)
         {
@@ -726,11 +976,45 @@ namespace YahtzeeFinalV2
 
         #region p1_Btn contains all the combination click events for player 1
 
+        private void p1_sixesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p1_fivesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p1_foursBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p1_threesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p1_twosBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p1_onesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void p1_chanceBtn_Click(object sender, EventArgs e)
         {
+
+
             p1chance = true;
             nextPlayerBtn.Show();
 
+            if (chance == true && p1chance != true) // check
+                p1_chanceScore.Text = chanceScore.ToString();
             if (twoPair == true && p1twoPair != true)
                 p1_twoPairScore.Text = null;
             if (threeKind == true && p1threeKind != true)
@@ -747,6 +1031,7 @@ namespace YahtzeeFinalV2
                 p1_yahtzeeScore.Text = null;
             if (onePair == true && p1onePair != true)
                 p1_onePairScore.Text = null;
+           // if (ones == true && p1)
 
             p1_chanceBtn.Hide();
             p1_onePairBtn.Hide();
@@ -1049,6 +1334,36 @@ namespace YahtzeeFinalV2
         #endregion
 
         #region p2_Btn contains all the combination click events for player 2
+
+        private void p2_sixesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p2_fivesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p2_foursBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p2_threesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p2_twosBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void p2_onesBtn_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void p2_chanceBtn_Click(object sender, EventArgs e)
         {

@@ -100,6 +100,42 @@
             this.label17 = new System.Windows.Forms.Label();
             this.p1_upperBox = new System.Windows.Forms.GroupBox();
             this.p2_upperBox = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.p1_sixesBtn = new System.Windows.Forms.Button();
+            this.p1_fivesBtn = new System.Windows.Forms.Button();
+            this.p1_foursBtn = new System.Windows.Forms.Button();
+            this.p1_threesBtn = new System.Windows.Forms.Button();
+            this.p1_twosBtn = new System.Windows.Forms.Button();
+            this.p1_onesBtn = new System.Windows.Forms.Button();
+            this.p2_sixesBtn = new System.Windows.Forms.Button();
+            this.p2_fivesBtn = new System.Windows.Forms.Button();
+            this.p2_foursBtn = new System.Windows.Forms.Button();
+            this.p2_threesBtn = new System.Windows.Forms.Button();
+            this.p2_twosBtn = new System.Windows.Forms.Button();
+            this.p2_onesBtn = new System.Windows.Forms.Button();
+            this.p1_onesScore = new System.Windows.Forms.Label();
+            this.p1_twosScore = new System.Windows.Forms.Label();
+            this.p1_threesScore = new System.Windows.Forms.Label();
+            this.p1_foursScore = new System.Windows.Forms.Label();
+            this.p1_fivesScore = new System.Windows.Forms.Label();
+            this.p1_sixesScore = new System.Windows.Forms.Label();
+            this.p2_sixesScore = new System.Windows.Forms.Label();
+            this.p2_fivesScore = new System.Windows.Forms.Label();
+            this.p2_foursScore = new System.Windows.Forms.Label();
+            this.p2_threesScore = new System.Windows.Forms.Label();
+            this.p2_twosScore = new System.Windows.Forms.Label();
+            this.p2_onesScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -112,6 +148,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.p1_lowerBox.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.p1_upperBox.SuspendLayout();
+            this.p2_upperBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -739,7 +777,7 @@
             this.p1_lowerBox.Controls.Add(this.p1_fullHouseScore);
             this.p1_lowerBox.Controls.Add(this.p1_twoPairBtn);
             this.p1_lowerBox.Controls.Add(this.p1_onePairBtn);
-            this.p1_lowerBox.Location = new System.Drawing.Point(58, 283);
+            this.p1_lowerBox.Location = new System.Drawing.Point(58, 235);
             this.p1_lowerBox.Name = "p1_lowerBox";
             this.p1_lowerBox.Size = new System.Drawing.Size(180, 230);
             this.p1_lowerBox.TabIndex = 62;
@@ -803,7 +841,7 @@
             this.groupBox1.Controls.Add(this.p2_highStraightScore);
             this.groupBox1.Controls.Add(this.p2_yahtzeeScore);
             this.groupBox1.Controls.Add(this.p2_fourKindScore);
-            this.groupBox1.Location = new System.Drawing.Point(693, 283);
+            this.groupBox1.Location = new System.Drawing.Point(693, 237);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(180, 230);
             this.groupBox1.TabIndex = 63;
@@ -840,21 +878,394 @@
             // 
             // p1_upperBox
             // 
+            this.p1_upperBox.Controls.Add(this.p1_sixesScore);
+            this.p1_upperBox.Controls.Add(this.p1_fivesScore);
+            this.p1_upperBox.Controls.Add(this.p1_foursScore);
+            this.p1_upperBox.Controls.Add(this.p1_threesScore);
+            this.p1_upperBox.Controls.Add(this.p1_twosScore);
+            this.p1_upperBox.Controls.Add(this.p1_onesScore);
+            this.p1_upperBox.Controls.Add(this.p1_sixesBtn);
+            this.p1_upperBox.Controls.Add(this.p1_fivesBtn);
+            this.p1_upperBox.Controls.Add(this.p1_foursBtn);
+            this.p1_upperBox.Controls.Add(this.p1_threesBtn);
+            this.p1_upperBox.Controls.Add(this.p1_twosBtn);
+            this.p1_upperBox.Controls.Add(this.p1_onesBtn);
+            this.p1_upperBox.Controls.Add(this.label23);
+            this.p1_upperBox.Controls.Add(this.label22);
+            this.p1_upperBox.Controls.Add(this.label21);
+            this.p1_upperBox.Controls.Add(this.label20);
+            this.p1_upperBox.Controls.Add(this.label19);
+            this.p1_upperBox.Controls.Add(this.label18);
             this.p1_upperBox.Location = new System.Drawing.Point(58, 28);
             this.p1_upperBox.Name = "p1_upperBox";
-            this.p1_upperBox.Size = new System.Drawing.Size(180, 230);
+            this.p1_upperBox.Size = new System.Drawing.Size(180, 201);
             this.p1_upperBox.TabIndex = 64;
             this.p1_upperBox.TabStop = false;
             this.p1_upperBox.Text = "Player 1 Upper";
             // 
             // p2_upperBox
             // 
+            this.p2_upperBox.Controls.Add(this.p2_sixesScore);
+            this.p2_upperBox.Controls.Add(this.p2_fivesScore);
+            this.p2_upperBox.Controls.Add(this.p2_foursScore);
+            this.p2_upperBox.Controls.Add(this.p2_threesScore);
+            this.p2_upperBox.Controls.Add(this.p2_twosScore);
+            this.p2_upperBox.Controls.Add(this.p2_onesScore);
+            this.p2_upperBox.Controls.Add(this.p2_sixesBtn);
+            this.p2_upperBox.Controls.Add(this.p2_fivesBtn);
+            this.p2_upperBox.Controls.Add(this.p2_foursBtn);
+            this.p2_upperBox.Controls.Add(this.p2_threesBtn);
+            this.p2_upperBox.Controls.Add(this.p2_twosBtn);
+            this.p2_upperBox.Controls.Add(this.p2_onesBtn);
+            this.p2_upperBox.Controls.Add(this.label24);
+            this.p2_upperBox.Controls.Add(this.label25);
+            this.p2_upperBox.Controls.Add(this.label26);
+            this.p2_upperBox.Controls.Add(this.label27);
+            this.p2_upperBox.Controls.Add(this.label28);
+            this.p2_upperBox.Controls.Add(this.label29);
             this.p2_upperBox.Location = new System.Drawing.Point(693, 28);
             this.p2_upperBox.Name = "p2_upperBox";
-            this.p2_upperBox.Size = new System.Drawing.Size(180, 230);
+            this.p2_upperBox.Size = new System.Drawing.Size(180, 201);
             this.p2_upperBox.TabIndex = 65;
             this.p2_upperBox.TabStop = false;
             this.p2_upperBox.Text = "Player 2 Upper";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(8, 28);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(20, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "1\'s";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(8, 48);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(20, 13);
+            this.label19.TabIndex = 66;
+            this.label19.Text = "2\'s";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(8, 70);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(20, 13);
+            this.label20.TabIndex = 67;
+            this.label20.Text = "3\'s";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(8, 115);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(20, 13);
+            this.label21.TabIndex = 68;
+            this.label21.Text = "5\'s";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(8, 92);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(20, 13);
+            this.label22.TabIndex = 69;
+            this.label22.Text = "4\'s";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(8, 142);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(20, 13);
+            this.label23.TabIndex = 70;
+            this.label23.Text = "6\'s";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(154, 132);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(20, 13);
+            this.label24.TabIndex = 76;
+            this.label24.Text = "6\'s";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(154, 87);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(20, 13);
+            this.label25.TabIndex = 75;
+            this.label25.Text = "4\'s";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(154, 110);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(20, 13);
+            this.label26.TabIndex = 74;
+            this.label26.Text = "5\'s";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(154, 65);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(20, 13);
+            this.label27.TabIndex = 73;
+            this.label27.Text = "3\'s";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(154, 43);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(20, 13);
+            this.label28.TabIndex = 72;
+            this.label28.Text = "2\'s";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(154, 21);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(20, 13);
+            this.label29.TabIndex = 71;
+            this.label29.Text = "1\'s";
+            // 
+            // p1_sixesBtn
+            // 
+            this.p1_sixesBtn.Location = new System.Drawing.Point(123, 131);
+            this.p1_sixesBtn.Name = "p1_sixesBtn";
+            this.p1_sixesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_sixesBtn.TabIndex = 76;
+            this.p1_sixesBtn.Text = "^";
+            this.p1_sixesBtn.UseVisualStyleBackColor = true;
+            this.p1_sixesBtn.Visible = false;
+            this.p1_sixesBtn.Click += new System.EventHandler(this.p1_sixesBtn_Click);
+            // 
+            // p1_fivesBtn
+            // 
+            this.p1_fivesBtn.Location = new System.Drawing.Point(123, 109);
+            this.p1_fivesBtn.Name = "p1_fivesBtn";
+            this.p1_fivesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_fivesBtn.TabIndex = 75;
+            this.p1_fivesBtn.Text = "^";
+            this.p1_fivesBtn.UseVisualStyleBackColor = true;
+            this.p1_fivesBtn.Visible = false;
+            this.p1_fivesBtn.Click += new System.EventHandler(this.p1_fivesBtn_Click);
+            // 
+            // p1_foursBtn
+            // 
+            this.p1_foursBtn.Location = new System.Drawing.Point(123, 86);
+            this.p1_foursBtn.Name = "p1_foursBtn";
+            this.p1_foursBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_foursBtn.TabIndex = 74;
+            this.p1_foursBtn.Text = "^";
+            this.p1_foursBtn.UseVisualStyleBackColor = true;
+            this.p1_foursBtn.Visible = false;
+            this.p1_foursBtn.Click += new System.EventHandler(this.p1_foursBtn_Click);
+            // 
+            // p1_threesBtn
+            // 
+            this.p1_threesBtn.Location = new System.Drawing.Point(123, 64);
+            this.p1_threesBtn.Name = "p1_threesBtn";
+            this.p1_threesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_threesBtn.TabIndex = 73;
+            this.p1_threesBtn.Text = "^";
+            this.p1_threesBtn.UseVisualStyleBackColor = true;
+            this.p1_threesBtn.Visible = false;
+            this.p1_threesBtn.Click += new System.EventHandler(this.p1_threesBtn_Click);
+            // 
+            // p1_twosBtn
+            // 
+            this.p1_twosBtn.Location = new System.Drawing.Point(123, 42);
+            this.p1_twosBtn.Name = "p1_twosBtn";
+            this.p1_twosBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_twosBtn.TabIndex = 72;
+            this.p1_twosBtn.Text = "^";
+            this.p1_twosBtn.UseVisualStyleBackColor = true;
+            this.p1_twosBtn.Visible = false;
+            this.p1_twosBtn.Click += new System.EventHandler(this.p1_twosBtn_Click);
+            // 
+            // p1_onesBtn
+            // 
+            this.p1_onesBtn.Location = new System.Drawing.Point(123, 20);
+            this.p1_onesBtn.Name = "p1_onesBtn";
+            this.p1_onesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p1_onesBtn.TabIndex = 71;
+            this.p1_onesBtn.Text = "^";
+            this.p1_onesBtn.UseVisualStyleBackColor = true;
+            this.p1_onesBtn.Visible = false;
+            this.p1_onesBtn.Click += new System.EventHandler(this.p1_onesBtn_Click);
+            // 
+            // p2_sixesBtn
+            // 
+            this.p2_sixesBtn.Location = new System.Drawing.Point(24, 126);
+            this.p2_sixesBtn.Name = "p2_sixesBtn";
+            this.p2_sixesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_sixesBtn.TabIndex = 82;
+            this.p2_sixesBtn.Text = "^";
+            this.p2_sixesBtn.UseVisualStyleBackColor = true;
+            this.p2_sixesBtn.Visible = false;
+            this.p2_sixesBtn.Click += new System.EventHandler(this.p2_sixesBtn_Click);
+            // 
+            // p2_fivesBtn
+            // 
+            this.p2_fivesBtn.Location = new System.Drawing.Point(24, 104);
+            this.p2_fivesBtn.Name = "p2_fivesBtn";
+            this.p2_fivesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_fivesBtn.TabIndex = 81;
+            this.p2_fivesBtn.Text = "^";
+            this.p2_fivesBtn.UseVisualStyleBackColor = true;
+            this.p2_fivesBtn.Visible = false;
+            this.p2_fivesBtn.Click += new System.EventHandler(this.p2_fivesBtn_Click);
+            // 
+            // p2_foursBtn
+            // 
+            this.p2_foursBtn.Location = new System.Drawing.Point(24, 81);
+            this.p2_foursBtn.Name = "p2_foursBtn";
+            this.p2_foursBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_foursBtn.TabIndex = 80;
+            this.p2_foursBtn.Text = "^";
+            this.p2_foursBtn.UseVisualStyleBackColor = true;
+            this.p2_foursBtn.Visible = false;
+            this.p2_foursBtn.Click += new System.EventHandler(this.p2_foursBtn_Click);
+            // 
+            // p2_threesBtn
+            // 
+            this.p2_threesBtn.Location = new System.Drawing.Point(24, 59);
+            this.p2_threesBtn.Name = "p2_threesBtn";
+            this.p2_threesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_threesBtn.TabIndex = 79;
+            this.p2_threesBtn.Text = "^";
+            this.p2_threesBtn.UseVisualStyleBackColor = true;
+            this.p2_threesBtn.Visible = false;
+            this.p2_threesBtn.Click += new System.EventHandler(this.p2_threesBtn_Click);
+            // 
+            // p2_twosBtn
+            // 
+            this.p2_twosBtn.Location = new System.Drawing.Point(24, 37);
+            this.p2_twosBtn.Name = "p2_twosBtn";
+            this.p2_twosBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_twosBtn.TabIndex = 78;
+            this.p2_twosBtn.Text = "^";
+            this.p2_twosBtn.UseVisualStyleBackColor = true;
+            this.p2_twosBtn.Visible = false;
+            this.p2_twosBtn.Click += new System.EventHandler(this.p2_twosBtn_Click);
+            // 
+            // p2_onesBtn
+            // 
+            this.p2_onesBtn.Location = new System.Drawing.Point(24, 15);
+            this.p2_onesBtn.Name = "p2_onesBtn";
+            this.p2_onesBtn.Size = new System.Drawing.Size(35, 24);
+            this.p2_onesBtn.TabIndex = 77;
+            this.p2_onesBtn.Text = "^";
+            this.p2_onesBtn.UseVisualStyleBackColor = true;
+            this.p2_onesBtn.Visible = false;
+            this.p2_onesBtn.Click += new System.EventHandler(this.p2_onesBtn_Click);
+            // 
+            // p1_onesScore
+            // 
+            this.p1_onesScore.AutoSize = true;
+            this.p1_onesScore.Location = new System.Drawing.Point(94, 26);
+            this.p1_onesScore.Name = "p1_onesScore";
+            this.p1_onesScore.Size = new System.Drawing.Size(0, 13);
+            this.p1_onesScore.TabIndex = 77;
+            // 
+            // p1_twosScore
+            // 
+            this.p1_twosScore.AutoSize = true;
+            this.p1_twosScore.Location = new System.Drawing.Point(94, 48);
+            this.p1_twosScore.Name = "p1_twosScore";
+            this.p1_twosScore.Size = new System.Drawing.Size(0, 13);
+            this.p1_twosScore.TabIndex = 78;
+            // 
+            // p1_threesScore
+            // 
+            this.p1_threesScore.AutoSize = true;
+            this.p1_threesScore.Location = new System.Drawing.Point(94, 70);
+            this.p1_threesScore.Name = "p1_threesScore";
+            this.p1_threesScore.Size = new System.Drawing.Size(0, 13);
+            this.p1_threesScore.TabIndex = 79;
+            // 
+            // p1_foursScore
+            // 
+            this.p1_foursScore.AutoSize = true;
+            this.p1_foursScore.Location = new System.Drawing.Point(94, 92);
+            this.p1_foursScore.Name = "p1_foursScore";
+            this.p1_foursScore.Size = new System.Drawing.Size(0, 13);
+            this.p1_foursScore.TabIndex = 80;
+            // 
+            // p1_fivesScore
+            // 
+            this.p1_fivesScore.AutoSize = true;
+            this.p1_fivesScore.Location = new System.Drawing.Point(94, 115);
+            this.p1_fivesScore.Name = "p1_fivesScore";
+            this.p1_fivesScore.Size = new System.Drawing.Size(0, 13);
+            this.p1_fivesScore.TabIndex = 81;
+            // 
+            // p1_sixesScore
+            // 
+            this.p1_sixesScore.AutoSize = true;
+            this.p1_sixesScore.Location = new System.Drawing.Point(94, 142);
+            this.p1_sixesScore.Name = "p1_sixesScore";
+            this.p1_sixesScore.Size = new System.Drawing.Size(0, 13);
+            this.p1_sixesScore.TabIndex = 82;
+            // 
+            // p2_sixesScore
+            // 
+            this.p2_sixesScore.AutoSize = true;
+            this.p2_sixesScore.Location = new System.Drawing.Point(75, 137);
+            this.p2_sixesScore.Name = "p2_sixesScore";
+            this.p2_sixesScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_sixesScore.TabIndex = 88;
+            // 
+            // p2_fivesScore
+            // 
+            this.p2_fivesScore.AutoSize = true;
+            this.p2_fivesScore.Location = new System.Drawing.Point(75, 110);
+            this.p2_fivesScore.Name = "p2_fivesScore";
+            this.p2_fivesScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_fivesScore.TabIndex = 87;
+            // 
+            // p2_foursScore
+            // 
+            this.p2_foursScore.AutoSize = true;
+            this.p2_foursScore.Location = new System.Drawing.Point(75, 87);
+            this.p2_foursScore.Name = "p2_foursScore";
+            this.p2_foursScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_foursScore.TabIndex = 86;
+            // 
+            // p2_threesScore
+            // 
+            this.p2_threesScore.AutoSize = true;
+            this.p2_threesScore.Location = new System.Drawing.Point(75, 65);
+            this.p2_threesScore.Name = "p2_threesScore";
+            this.p2_threesScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_threesScore.TabIndex = 85;
+            // 
+            // p2_twosScore
+            // 
+            this.p2_twosScore.AutoSize = true;
+            this.p2_twosScore.Location = new System.Drawing.Point(75, 43);
+            this.p2_twosScore.Name = "p2_twosScore";
+            this.p2_twosScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_twosScore.TabIndex = 84;
+            // 
+            // p2_onesScore
+            // 
+            this.p2_onesScore.AutoSize = true;
+            this.p2_onesScore.Location = new System.Drawing.Point(75, 21);
+            this.p2_onesScore.Name = "p2_onesScore";
+            this.p2_onesScore.Size = new System.Drawing.Size(0, 13);
+            this.p2_onesScore.TabIndex = 83;
             // 
             // p2_lowerBox
             // 
@@ -896,6 +1307,10 @@
             this.p1_lowerBox.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.p1_upperBox.ResumeLayout(false);
+            this.p1_upperBox.PerformLayout();
+            this.p2_upperBox.ResumeLayout(false);
+            this.p2_upperBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -974,6 +1389,42 @@
         private System.Windows.Forms.Button p2_chanceBtn;
         private System.Windows.Forms.Label p2_chanceScore;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button p1_sixesBtn;
+        private System.Windows.Forms.Button p1_fivesBtn;
+        private System.Windows.Forms.Button p1_foursBtn;
+        private System.Windows.Forms.Button p1_threesBtn;
+        private System.Windows.Forms.Button p1_twosBtn;
+        private System.Windows.Forms.Button p1_onesBtn;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label p1_fivesScore;
+        private System.Windows.Forms.Label p1_foursScore;
+        private System.Windows.Forms.Label p1_threesScore;
+        private System.Windows.Forms.Label p1_twosScore;
+        private System.Windows.Forms.Label p1_onesScore;
+        private System.Windows.Forms.Button p2_sixesBtn;
+        private System.Windows.Forms.Button p2_fivesBtn;
+        private System.Windows.Forms.Button p2_foursBtn;
+        private System.Windows.Forms.Button p2_threesBtn;
+        private System.Windows.Forms.Button p2_twosBtn;
+        private System.Windows.Forms.Button p2_onesBtn;
+        private System.Windows.Forms.Label p1_sixesScore;
+        private System.Windows.Forms.Label p2_sixesScore;
+        private System.Windows.Forms.Label p2_fivesScore;
+        private System.Windows.Forms.Label p2_foursScore;
+        private System.Windows.Forms.Label p2_threesScore;
+        private System.Windows.Forms.Label p2_twosScore;
+        private System.Windows.Forms.Label p2_onesScore;
     }
 }
 
